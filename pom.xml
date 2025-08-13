@@ -11,11 +11,9 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <!-- Java 17 configuration -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
-
         <docker.image.prefix>kammana</docker.image.prefix>
     </properties>	
 
@@ -54,5 +52,14 @@
         </pluginRepository>
     </pluginRepositories>
 
-</project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+        </plugins>
+    </build>
 
+</project>
